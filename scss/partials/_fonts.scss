@@ -1,0 +1,83 @@
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+@mixin fluid-text($min-font-size, $max-font-size, $break-start, $break-end) {
+	
+	/////
+	// Font Size Calculations
+	/////
+	
+	$m: (strip-unit($max-font-size) - strip-unit($min-font-size)) / (strip-unit($break-end) - strip-unit($break-start));
+	
+	$b: #{$min-font-size - $m * $break-start};
+	
+	$mx: #{$m * 100vw};
+	
+	/////
+	// Font Size Output
+	/////
+	
+	font-size: #{$min-font-size};
+
+	@media (min-width: #{$break-start}) {
+	   font-size: calc(#{$mx} + #{$b});
+	}
+
+	@media (min-width: $break-end) {
+	   font-size: #{$max-font-size};
+	}
+}
+
+@mixin fluid-line-height($min-line-height, $max-line-height, $break-start, $break-end) {
+	
+	/////
+	// Line Height Calculations
+	/////
+	
+	$m: (strip-unit($max-line-height) - strip-unit($min-line-height)) / (strip-unit($break-end) - strip-unit($break-start));
+	
+	$b: #{$min-line-height - $m * $break-start};
+	
+	$mx: #{$m * 100vw};
+	
+	/////
+	// Line Height Output
+	/////
+	
+	line-height:  #{$min-line-height};
+
+	@media (min-width: #{$break-start}) {
+	   line-height: calc(#{$mx} + #{$b});
+	}
+
+	@media (min-width: $break-end) {
+	   line-height: #{$max-line-height};
+	}
+}
+
+h1 {	
+	@include fluid-text(23px, 80px, 450px, 1440px);
+	@include fluid-line-height(28px, 95px, 450px, 1440px);}
+h5 {	
+	@include fluid-text(10px, 30px, 450px, 1440px);
+	@include fluid-line-height(20px, 50px, 450px, 1440px);}
+p {	
+	@include fluid-text(14px, 18px, 450px, 1440px);
+	@include fluid-line-height(18px, 25px, 450px, 1440px);}
+
+
+
+// Additional Font Styles
+
+h1 {
+  background-color: #000;
+  color: transparent;
+  text-shadow: 0px 2px 2px #ccc;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;}

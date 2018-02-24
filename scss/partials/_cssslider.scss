@@ -1,0 +1,323 @@
+/****************
+Slider Styles
+****************/
+.main-slider-box {
+	position: relative;
+	width: $slider-width;
+	height: $slider-height;}
+.folder {
+	left: 50%;
+	transform: translate(-50%);
+	width: $slider-width;
+	max-width: $slider-max-width;
+	visibility: hidden;}
+.fold {
+	visibility: hidden;
+	display: none;
+	width: $slider-width;
+	max-width: $slider-max-width;
+	height: $slider-height;
+	-webkit-transition: all $slider-buttons-transition-duration;
+	-moz-transition: all $slider-buttons-transition-duration;
+	transition: all $slider-buttons-transition-duration;
+	clear: both;}
+.toggle {
+	height: 20px;
+	width: 20px;
+	display: none;}
+.toggle-label {
+	display: inline-block;
+	width: 20%;
+	height: 100%;
+	cursor: pointer;
+	opacity: 0;
+	-webkit-transition: all $slider-buttons-transition-duration;
+	-moz-transition: all $slider-buttons-transition-duration;
+	transition: all $slider-buttons-transition-duration;}
+.toggle-label:hover {
+	opacity: 0.8;}
+.toggle:checked~ .fold {
+	visibility: visible;
+	color: #fff;
+	display: block;}
+.toggle:checked~ .fold .picture_one {
+	animation: $slider-duration picOne infinite;}
+.toggle:checked~ .fold .picture_two {
+	animation: $slider-duration picTwo infinite;}
+.toggle:checked~ .fold .picture_three {
+	animation: $slider-duration picThree infinite;}
+.toggle:checked~ .fold .picture_four {
+	animation: $slider-duration picFour infinite;}
+.toggle:checked~ .fold .caption_one {
+	animation: $slider-duration capOne infinite;}
+.toggle:checked~ .fold .caption_two {
+	animation: $slider-duration capTwo infinite;}
+.toggle:checked~ .fold .caption_three {
+	animation: $slider-duration capThree infinite;}
+.toggle:checked~ .fold .caption_four {
+	animation: $slider-duration capFour infinite;}
+.toggle:checked~ .fold .toggle-dot1 {
+	animation: $slider-duration dotOne infinite;}
+.toggle:checked~ .fold .toggle-dot2 {
+	animation: $slider-duration dotTwo infinite;}
+.toggle:checked~ .fold .toggle-dot3 {
+	animation: $slider-duration dotThree infinite;}
+.toggle:checked~ .fold .toggle-dot4 {
+	animation: $slider-duration dotFour infinite;}
+.right-button {
+	background: url(../img/slider-arrow-right.png) center no-repeat;
+	background-size: contain;}
+.left-button {
+	background: url('../img/slider-arrow-left.png') center no-repeat;
+	background-size: contain;}
+div.slider {
+	margin-top: 0px;
+	overflow: hidden;}
+.picture {
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;}
+.slider_boundary_large {
+	position: relative;
+	max-width: $slider-max-width;
+	height: $slider-height;
+	overflow: hidden;
+	border: $slider-border;}
+.caption-bg {
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: auto;
+	background-color: $caption-bg;
+	z-index: 8;}
+.caption-left {
+	left: 1vw;
+	z-index: 9;}
+.caption-right {
+	right: 1vw;
+	z-index: 9;}
+.nav-dots {
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 10;}
+.nav-dots .toggle-dot {
+	background-color: #fff;
+	width: 12px;
+	height: 12px;
+	margin: .5vw .5vw;
+	border-radius: 50%;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-transition: all $slider-buttons-transition-duration;
+	-moz-transition: all $slider-buttons-transition-duration;
+	transition: all $slider-buttons-transition-duration;}
+.nav-dots .toggle-dot:hover {
+	background-color: $toggle-dots-hover-color;}
+ @keyframes picOne {
+ 0% {
+ opacity: 1; z-index: 2; left: 0%;}
+ 25% {
+ opacity: 1; z-index: 2; left: 0%;}
+ 26% {
+ opacity: 0; z-index: 4; left: 0%;}
+ 27% {
+ opacity: 0; z-index: 4; left: 110%;}
+ 94% {
+ opacity: 0; z-index: 4; left: 110%;}
+ 95% {
+ opacity: 1; z-index: 4; left: 110%;}
+ 100% {
+ opacity: 1; z-index: 4; left: 0%;}
+}
+ @keyframes picTwo {
+ 0% {
+ opacity: 0; z-index: 4; left: 110%;}
+ 20% {
+ opacity: 1; z-index: 4; left: 110%;}
+ 25% {
+ opacity: 1; z-index: 4; left: 0%;}
+ 49% {
+ opacity: 1; z-index: 4; left: 0%;}
+ 50% {
+ opacity: 1; z-index: 4; left: 0%;}
+ 51% {
+ opacity: 0; z-index: 4; left: 0%;}
+ 52% {
+ opacity: 0; z-index: 4; left: 110%;}
+ 100% {
+ opacity: 0; z-index: 4; left: 110%;}
+}
+ @keyframes picThree {
+ 0% {
+ opacity: 0; z-index: 4; left: 110%;}
+ 45% {
+ opacity: 1; z-index: 4; left: 110%;}
+ 50% {
+ opacity: 1; z-index: 4; left: 0%;}
+ 74% {
+ opacity: 1; z-index: 4; left: 0%;}
+ 75% {
+ opacity: 1; z-index: 2; left: 0%;}
+ 76% {
+ opacity: 0; z-index: 4; left: 0%;}
+ 77% {
+ opacity: 0; z-index: 4; left: 110%;}
+ 100% {
+ opacity: 0; z-index: 4; left: 110%;}
+}
+ @keyframes picFour {
+ 0% {
+ z-index: 4; left: 110%;}
+ 70% {
+ left: 110%; z-index: 4;}
+ 75% {
+ left: 0%; z-index: 4;}
+ 94% {
+ z-index: 4; left: 0%;}
+ 95% {
+ left: 0%; z-index: 2;}
+ 100% {
+ left: 0%; z-index: 2;}
+}
+ @keyframes capOne {
+ 0% {
+ opacity: 0;}
+ 4% {
+ opacity: 1;}
+ 18% {
+ opacity: 1;}
+ 22% {
+ opacity: 0;}
+ 100% {
+ opacity: 0;}
+}
+ @keyframes capTwo {
+ 0% {
+ opacity: 0;}
+ 25% {
+ opacity: 0;}
+ 29% {
+ opacity: 1;}
+ 43% {
+ opacity: 1;}
+ 47% {
+ opacity: 0;}
+ 100% {
+ opacity: 0;}
+}
+ @keyframes capThree {
+ 0% {
+ opacity: 0;}
+ 50% {
+ opacity: 0;}
+ 54% {
+ opacity: 1;}
+ 68% {
+ opacity: 1;}
+ 72% {
+ opacity: 0;}
+ 100% {
+ opacity: 0;}
+}
+ @keyframes capFour {
+ 0% {
+ opacity: 0;}
+ 75% {
+ opacity: 0;}
+ 79% {
+ opacity: 1;}
+ 93% {
+ opacity: 1;}
+ 97% {
+ opacity: 0;}
+ 100% {
+ opacity: 0;}
+}
+ @keyframes dotOne {
+ 0% {
+ opacity: $toggle-dot-full;}
+ 20% {
+ opacity: $toggle-dot-full;}
+ 25% {
+ opacity: $toggle-dot-opaque;}
+ 95% {
+ opacity: $toggle-dot-opaque;}
+ 100% {
+ opacity: $toggle-dot-opaque;}
+}
+ @keyframes dotTwo {
+ 0% {
+ opacity: $toggle-dot-opaque;}
+ 20% {
+ opacity: $toggle-dot-opaque;}
+ 25% {
+ opacity: $toggle-dot-full;}
+ 45% {
+ opacity: $toggle-dot-full;}
+ 50% {
+ opacity: $toggle-dot-opaque;}
+ 100% {
+ opacity: $toggle-dot-opaque;}
+}
+ @keyframes dotThree {
+ 0% {
+ opacity: $toggle-dot-opaque;}
+ 45% {
+ opacity: $toggle-dot-opaque;}
+ 50% {
+ opacity: $toggle-dot-full;}
+ 70% {
+ opacity: $toggle-dot-full;}
+ 75% {
+ opacity: $toggle-dot-opaque;}
+ 100% {
+ opacity: $toggle-dot-opaque;}
+}
+ @keyframes dotFour {
+ 0% {
+ opacity: $toggle-dot-opaque;}
+ 70% {
+ opacity: $toggle-dot-opaque;}
+ 75% {
+ opacity: $toggle-dot-full;}
+ 95% {
+ opacity: $toggle-dot-full;}
+ 100% {
+ opacity: $toggle-dot-opaque;}
+}
+figure img {
+	margin-bottom: -2px;
+}
+
+@mixin fluid-height($min-height, $max-height, $break-start, $break-end) {
+	
+	/////
+	// Height Calculations
+	/////
+	
+	$m: (strip-unit($max-height) - strip-unit($min-height)) / (strip-unit($break-end) - strip-unit($break-start));
+	
+	$b: #{$min-height - $m * $break-start};
+	
+	$mx: #{$m * 100vw};
+	
+	/////
+	// Height Output
+	/////
+	
+	height:  #{$min-height};
+
+	@media (min-width: #{$break-start}) {
+	   height: calc(#{$mx} + #{$b});
+	}
+
+	@media (min-width: $break-end) {
+	   height: #{$max-height};
+	}
+}
+
+.caption-bg {
+	@include fluid-height(20px, 50px, 450px, 1440px);
+}

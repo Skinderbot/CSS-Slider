@@ -1,0 +1,65 @@
+@for $i  from 1 through 10 {
+	.width-#{$i} {
+		width: $i * 10%;
+	}
+}
+@for $i  from 1 through 10 {
+	.view-width-#{$i} {
+		width: $i * 10vw;
+	}
+}
+@for $i  from 1 through 10 {
+	.height-#{$i} {
+		height: $i * 10%;
+	}
+}
+@for $i  from 1 through 10 {
+	.veiw-height-#{$i} {
+		height: $i * 10vh;
+	}
+}
+@for $i  from 1 through 10 {
+	.font-weight-#{$i} {
+		font-weight: $i * 100;
+	}
+}
+@for $i  from 1 through 5 {
+	.letter-spacing-#{$i} {
+		letter-spacing: $i * 1px;
+	}
+}
+@for $i  from 1 through 20 {
+	.pad-#{$i} {
+		padding: $i * 1px $i * 1px;
+	}
+}
+@for $i  from 1 through 20 {
+	.h-pad-#{$i} {
+		padding: 0px $i * 1px;
+	}
+}
+@for $i  from 1 through 20 {
+	.v-pad-#{$i} {
+		padding: $i * 1px 0px;
+	}
+}
+@for $i  from 1 through 20 {
+	.t-pad-#{$i} {
+		padding-top: $i * 1px;
+	}
+}
+@for $i  from 1 through 20 {
+	.r-pad-#{$i} {
+		padding-right: $i * 1px;
+	}
+}
+@for $i  from 1 through 20 {
+	.b-pad-#{$i} {
+		padding-bottom: $i * 1px;
+	}
+}
+@for $i  from 1 through 20 {
+	.l-pad-#{$i} {
+		padding-left: $i * 1px;
+	}
+}

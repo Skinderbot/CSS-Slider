@@ -1,0 +1,25 @@
+/****************
+Modular Styles
+****************/
+body {
+	background: $bg-color;
+	font-family: $main-font;
+	color: $main-font-color;
+	font-weight: $main-font-weight;}
+.float-left {
+	float: left;}
+.float-right {
+	float: right}
+.relative {
+	position: relative;}
+.absolute {
+	position: absolute;}
+.center {
+	left: 50%;
+	transform: translate(-50%)}
+.block {
+	display: block;}
+.inline-block {
+	display: inline-block;}
+.text-centered {
+	text-align: center;}
